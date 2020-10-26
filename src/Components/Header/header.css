@@ -1,0 +1,63 @@
+.taggram-header {
+    /* SIZE */
+    height: 54px;
+    width: 100vw;
+
+    /* DISPLAY */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* SPACES */
+    padding: 0 8%;
+
+    /* BORDER */
+    border-bottom: 1px solid #DBDBDB;
+    
+    /* COLORS */
+    background: #FFFFFF;
+}
+
+.taggram-header .logo {
+    /* SIZE */
+    width: 82px;
+    height: 29px;
+
+    /* SPACES */
+    margin-top: 5px;
+
+    /* BORDER */
+    border: 0.3px dashed #000000;
+}
+
+.taggram-header .logged-user {
+    /* DISPLAY */
+    display: flex;
+    align-items: center;
+}
+
+.taggram-header .logged-user .avatar {
+    /* SIZE */
+    height: 22px;
+    width: 22px;
+
+    /* SPACES */
+    margin-left: 12px;
+    border-radius: 22px;
+
+    /* COLORS */
+    background: #DBDBDB;
+}
+
+.taggram-header .logged-user .avatar.empty {
+    background: #DBDBDB;
+} 
+
+.taggram-header .logged-user p {
+    /* FONT */
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+}
