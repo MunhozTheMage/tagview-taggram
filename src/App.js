@@ -1,23 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import { loggedUser, currentPost, postComment } from './API/taggram.js';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={async () => console.log(await loggedUser)}>This User</button>
+      <button onClick={async () => console.log(await currentPost)}>This Post</button>
+      <button onClick={async () => console.log(await postComment("This is a test, hello world!"))}>Create Post</button>
     </div>
   );
 }
