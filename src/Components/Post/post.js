@@ -38,6 +38,7 @@ export default function Post() {
         showPostInfoWhenReady();
     }, []);
 
+    // Handle error state changes.
     useEffect(() => {
         if(!hasError.status) return;
 
@@ -64,6 +65,7 @@ export default function Post() {
         });
     }
 
+    // Triggered on "Enviar" button click.
     function handleSendComment() {
         postComment(commentMessage, false)
         .then((res) => {
@@ -98,57 +100,84 @@ export default function Post() {
         return `${day} DE ${month}`;
     }
 
+    // Post Image JSX Element.
+    const postImage = (
+        postData.photo ?
+        <img className="post-image" src={postData.photo}></img>
+        :
+        <div className="post-image empty"></div>
+    );
+
+    // Post Owner Information JSX Element.
+    const postOwner = (
+        <div className="post-owner-info">
+            { postData.user.avatar ? 
+                <img src={postData.user.avatar}></img>
+                : 
+                <div className="empty"></div>
+            }
+            
+            <div className="info-area">
+                { postData.user.username ? 
+                    <p className="name">{postData.user.username}</p>
+                : null }
+
+                { postData.location.city && postData.location.country ? 
+                    <p className="location">{`${postData.location.city}, ${postData.location.country}`}</p>
+                : null }
+            </div>
+        </div>
+    );
+
+    // Post Information JSX Element.
+    const postInfo = (
+        <div className="comments-details">
+            <strong>{`${postData.comments.length} comentários`}</strong>
+            <p>{getTextDate()}</p>
+        </div>
+    );
+
+    // Comment Publication JSX Element.
+    const commentPublication = (
+        <div className="new-comment-area">
+            <textarea
+                value={commentMessage}
+                onChange={(e) => { setCommentMessage(e.target.value) }}
+                placeholder="Comente sobre essa postagem..."
+            ></textarea>
+
+            <button
+                onClick={handleSendComment}
+            >Enviar</button>
+        </div>
+    );
+
+    // Error Display JSX Element.
+    const errorDisplay = (
+        <div className="new-comment-area error">
+            <p>{ !hasError.critical ?
+                "Não foi possível enviar seu comentário"
+                : 
+                "Ocorreu um erro ao tentar se conectar ao servidor"
+            }</p>
+        </div>
+    );
+
     return (
         <div className="taggram-post">
             <div className="post-area">
-                { postData.photo ?
-                    <img className="post-image" src={postData.photo}></img>
-                    :
-                    <div className="post-image empty"></div>
-                }
+                { postImage }
                 <div className="post-details">
-                    <div className="post-owner-info">
-                        { postData.user.avatar ? 
-                            <img src={postData.user.avatar}></img>
-                            : 
-                            <div className="empty"></div>
-                        }
-                        <div className="info-area">
-                        { postData.user.username ? 
-                            <p className="name">{postData.user.username}</p>
-                        : null }
-                        { postData.location.city && postData.location.country ? 
-                            <p className="location">{`${postData.location.city}, ${postData.location.country}`}</p>
-                        : null }
-                        </div>
-                    </div>
+                    { postOwner }
                     <div className="comments-area">
                         { renderComments() }
                     </div>
                     <div className="above-comments">
-                        <div className="comments-details">
-                            <strong>{`${postData.comments.length} comentários`}</strong>
-                            <p>{getTextDate()}</p>
-                        </div>
+                        { postInfo }
                         { !hasError.status ?
-                            <div className="new-comment-area">
-                            <textarea
-                                value={commentMessage}
-                                onChange={(e) => { setCommentMessage(e.target.value) }}
-                                placeholder="Comente sobre essa postagem..."
-                            ></textarea>
-                            <button
-                                onClick={handleSendComment}
-                            >Enviar</button>
-                            </div>
+                            commentPublication
                             : 
-                            <div className="new-comment-area error">
-                                <p>{ !hasError.critical ?
-                                "Não foi possível enviar seu comentário"
-                                : 
-                                "Ocorreu um erro ao tentar se conectar ao servidor"
-                                }</p>
-                            </div>
+                            errorDisplay
                         }
                     </div>
                 </div>
