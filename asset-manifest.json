@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/tagview-taggram/static/css/main.278f7d47.chunk.css",
-    "main.js": "/tagview-taggram/static/js/main.3e1fbe49.chunk.js",
-    "main.js.map": "/tagview-taggram/static/js/main.3e1fbe49.chunk.js.map",
+    "main.css": "/tagview-taggram/static/css/main.6002bc43.chunk.css",
+    "main.js": "/tagview-taggram/static/js/main.b1e41aae.chunk.js",
+    "main.js.map": "/tagview-taggram/static/js/main.b1e41aae.chunk.js.map",
     "runtime-main.js": "/tagview-taggram/static/js/runtime-main.98111d05.js",
     "runtime-main.js.map": "/tagview-taggram/static/js/runtime-main.98111d05.js.map",
     "static/js/2.27e74c15.chunk.js": "/tagview-taggram/static/js/2.27e74c15.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.cbe416b0.chunk.js": "/tagview-taggram/static/js/3.cbe416b0.chunk.js",
     "static/js/3.cbe416b0.chunk.js.map": "/tagview-taggram/static/js/3.cbe416b0.chunk.js.map",
     "index.html": "/tagview-taggram/index.html",
-    "static/css/main.278f7d47.chunk.css.map": "/tagview-taggram/static/css/main.278f7d47.chunk.css.map",
+    "static/css/main.6002bc43.chunk.css.map": "/tagview-taggram/static/css/main.6002bc43.chunk.css.map",
     "static/js/2.27e74c15.chunk.js.LICENSE.txt": "/tagview-taggram/static/js/2.27e74c15.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.98111d05.js",
     "static/js/2.27e74c15.chunk.js",
-    "static/css/main.278f7d47.chunk.css",
-    "static/js/main.3e1fbe49.chunk.js"
+    "static/css/main.6002bc43.chunk.css",
+    "static/js/main.b1e41aae.chunk.js"
   ]
 }
