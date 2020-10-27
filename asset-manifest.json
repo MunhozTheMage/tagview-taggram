@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/MunhozTheMage/tagview-taggram/settings/static/css/main.e75280fc.chunk.css",
-    "main.js": "/MunhozTheMage/tagview-taggram/settings/static/js/main.ba3b78cc.chunk.js",
-    "main.js.map": "/MunhozTheMage/tagview-taggram/settings/static/js/main.ba3b78cc.chunk.js.map",
-    "runtime-main.js": "/MunhozTheMage/tagview-taggram/settings/static/js/runtime-main.bd5cefa3.js",
-    "runtime-main.js.map": "/MunhozTheMage/tagview-taggram/settings/static/js/runtime-main.bd5cefa3.js.map",
-    "static/js/2.06d99ddf.chunk.js": "/MunhozTheMage/tagview-taggram/settings/static/js/2.06d99ddf.chunk.js",
-    "static/js/2.06d99ddf.chunk.js.map": "/MunhozTheMage/tagview-taggram/settings/static/js/2.06d99ddf.chunk.js.map",
-    "static/js/3.af70f854.chunk.js": "/MunhozTheMage/tagview-taggram/settings/static/js/3.af70f854.chunk.js",
-    "static/js/3.af70f854.chunk.js.map": "/MunhozTheMage/tagview-taggram/settings/static/js/3.af70f854.chunk.js.map",
-    "index.html": "/MunhozTheMage/tagview-taggram/settings/index.html",
-    "static/css/main.e75280fc.chunk.css.map": "/MunhozTheMage/tagview-taggram/settings/static/css/main.e75280fc.chunk.css.map",
-    "static/js/2.06d99ddf.chunk.js.LICENSE.txt": "/MunhozTheMage/tagview-taggram/settings/static/js/2.06d99ddf.chunk.js.LICENSE.txt"
+    "main.css": "/tagview-taggram/static/css/main.e75280fc.chunk.css",
+    "main.js": "/tagview-taggram/static/js/main.ba3b78cc.chunk.js",
+    "main.js.map": "/tagview-taggram/static/js/main.ba3b78cc.chunk.js.map",
+    "runtime-main.js": "/tagview-taggram/static/js/runtime-main.b28d4f3f.js",
+    "runtime-main.js.map": "/tagview-taggram/static/js/runtime-main.b28d4f3f.js.map",
+    "static/js/2.06d99ddf.chunk.js": "/tagview-taggram/static/js/2.06d99ddf.chunk.js",
+    "static/js/2.06d99ddf.chunk.js.map": "/tagview-taggram/static/js/2.06d99ddf.chunk.js.map",
+    "static/js/3.af70f854.chunk.js": "/tagview-taggram/static/js/3.af70f854.chunk.js",
+    "static/js/3.af70f854.chunk.js.map": "/tagview-taggram/static/js/3.af70f854.chunk.js.map",
+    "index.html": "/tagview-taggram/index.html",
+    "static/css/main.e75280fc.chunk.css.map": "/tagview-taggram/static/css/main.e75280fc.chunk.css.map",
+    "static/js/2.06d99ddf.chunk.js.LICENSE.txt": "/tagview-taggram/static/js/2.06d99ddf.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.bd5cefa3.js",
+    "static/js/runtime-main.b28d4f3f.js",
     "static/js/2.06d99ddf.chunk.js",
     "static/css/main.e75280fc.chunk.css",
     "static/js/main.ba3b78cc.chunk.js"
