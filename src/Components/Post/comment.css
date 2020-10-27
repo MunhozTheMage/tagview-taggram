@@ -19,10 +19,13 @@
 }
 
 .comment .comment-image.empty {
+    /* SIZE */
     height: 32px;
     width: 32px;
-    background-color: #DBDBDB;
     flex-shrink: 0;
+
+    /* COLOR */
+    background-color: #DBDBDB;
 }
 
 .comment .time {

@@ -1,0 +1,10 @@
+.taggram-footer {
+    /* SIZE */
+    width: 100vw;
+    height: max(calc(20vh - 74px), 30px);
+
+    /* DISPLAY */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

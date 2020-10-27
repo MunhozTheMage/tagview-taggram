@@ -11,10 +11,6 @@ export default function Comment(props) {
         var timeDiff = Math.floor((Date.now() - new Date(time)) / 1000);
         var timeSuffix = 's';
 
-        console.log(
-            timeDiff / (60 * 60 * 24)
-        );
-
         if(timeDiff / (60 * 60 * 24 * 365) >= 1) {
             timeDiff = Math.floor(timeDiff / (60 * 60 * 24 * 365));
             timeSuffix = 'y';
