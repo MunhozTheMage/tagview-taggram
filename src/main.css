@@ -8,3 +8,20 @@
 body {
     background: #FAFAFA;
 }
+
+*:focus {
+    outline: none;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #b0b0b01c;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(150, 149, 149, 0.384);
+    border-radius: 2px;
+}

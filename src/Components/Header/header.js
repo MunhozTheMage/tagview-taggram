@@ -28,14 +28,16 @@ export default function Header() {
 
     return (
         <header className="taggram-header">
-            <img className="logo" alt="logo" src="/images/logo.svg"></img>
-            <div className="logged-user">
-                <p>{userData.username}</p>
-                { userData.avatar ?
-                <img className="avatar" src={userData.avatar}></img>
-                :
-                <div className="avatar empty"></div>
-                }
+            <div className="content-container">
+                <img className="logo" alt="logo" src="/images/logo.svg"></img>
+                <div className="logged-user">
+                    <p>{userData.username}</p>
+                    { userData.avatar ?
+                    <img className="avatar" src={userData.avatar}></img>
+                    :
+                    <div className="avatar empty"></div>
+                    }
+                </div>
             </div>
         </header>
     )

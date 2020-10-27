@@ -6,16 +6,24 @@
     /* DISPLAY */
     display: flex;
     align-items: center;
-    justify-content: space-between;
-
-    /* SPACES */
-    padding: 0 8%;
+    justify-content: center;
 
     /* BORDER */
     border-bottom: 1px solid #DBDBDB;
     
     /* COLORS */
     background: #FFFFFF;
+}
+
+.taggram-header .content-container {
+    /* SIZE */
+    width: 84%;
+    max-width: 933px;
+
+    /* DISPLAY */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .taggram-header .logo {

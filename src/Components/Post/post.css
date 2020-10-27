@@ -1,0 +1,222 @@
+.taggram-post {
+    /* SIZE */
+    width: 100vw;
+    height: max(598px, 80vh);
+
+    /* SPACES */
+    box-sizing: content-box;
+    padding-top: 20px;
+
+    /* DISPLAY */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.taggram-post .post-area {
+    /* SIZE */
+    height: 598px;
+    width: 933px;
+
+    /* DISPLAY */
+    display: flex;
+    overflow: hidden;
+
+    /* BORDER */
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+
+    /* COLORS */
+    background: #FFFFFF;
+}
+
+.taggram-post .post-area .post-image {
+    /* SIZE */
+    height: 598px;
+    width: 598px;
+
+    /* POSITION */
+    position: relative;
+    left: 0;
+}
+
+.taggram-post .post-area .post-details {
+    /* SIZE */
+    width: 334px;
+    height: 100%;
+
+    /* BORDER */
+    border-left: 1px solid #EFEFEF;
+
+    /* DISPLAY */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.taggram-post .post-area .post-details .above-comments {
+    bottom: 0;
+
+    width: 100%;
+}
+
+.taggram-post .post-area .post-details .post-owner-info {
+    /* SIZE */
+    height: 73px;
+    min-height: 73px;
+
+    /* DISPLAY */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    /* BORDER */
+    border-bottom: 1px solid #EFEFEF;
+}
+
+.taggram-post .post-area .post-details .post-owner-info img {
+    /* SIZE */
+    height: 32px;
+
+    /* BORDER */
+    border-radius: 32px;
+
+    /* SPACES */
+    margin: 0 16px;
+}
+
+.taggram-post .post-area .post-details .post-owner-info .info-area .name {
+    /* FONT */
+    font-family: Arial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.taggram-post .post-area .post-details .post-owner-info .info-area .location {    
+    /* FONT */
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.taggram-post .post-area .post-details .comments-details {
+    /* SIZE */
+    height: 61px;
+    min-height: 61px;
+
+    /* SPACES */
+    padding-left: 16px;
+
+    /* DISPLAY */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* BORDER */
+    border-bottom: 1px solid #EFEFEF;
+}
+
+.taggram-post .post-area .post-details .comments-details strong {
+    /* FONT */
+    font-family: Arial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.taggram-post .post-area .post-details .comments-details p {
+    /* FONT */
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 18px;
+
+    /* COLORS */
+    color: #8E8E8E;
+}
+
+.taggram-post .post-area .post-details .new-comment-area {
+    /* SIZE */
+    min-height: 55px;
+    max-height: 155px;
+
+    /* DISPLAY */
+    display: flex;
+}
+
+.taggram-post .post-area .post-details .new-comment-area button {
+    /* SPACES */
+    padding: 0 16px;
+
+    /* FONT */
+    font-family: Arial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+
+    /* COLORS */
+    background: #ffffff00;
+    color: #0095F6;
+
+    /* EFFECTS */
+    transition: all 400ms;
+}
+
+.taggram-post .post-area .post-details .new-comment-area button:hover {
+    font-size: 16px;
+    font-weight: bolder;
+    padding: 0 13px;
+}
+
+.taggram-post .post-area .post-details .new-comment-area textarea {
+    /* SIZE */
+    flex: auto;
+    max-height: 155px;
+    resize: none;
+    overflow: auto;
+
+    /* SPACES */
+    padding: 16px 15px 0 15px;
+
+    /* BORDER */
+    border: 0;
+
+    /* FONT */
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: justify;
+
+
+    /* EFFECTS */
+    transition: border 50ms;
+    transition: padding 200ms;
+}
+
+.taggram-post .post-area .post-details .new-comment-area textarea:focus,
+.taggram-post .post-area .post-details .new-comment-area textarea:hover {
+    border-bottom: 2px solid #0095F6;
+    padding: 8px 15px;
+}
+
+.taggram-post .post-area .post-details .comments-area {
+    /* SIZE */
+    flex: auto;
+
+    /* DISPLAY */
+    overflow: hidden scroll;
+
+    /* SPACES */
+    padding-top: 16px;
+
+    /* BORDER */
+    border-bottom: 1px solid #EFEFEF;
+}
