@@ -14,10 +14,12 @@ export default function Header() {
     // When the promisse is fulfilled, update the state with the
     // acquired info.
     async function showUserInfoWhenReady() {
-        loggedUser.then((user) => {
+        loggedUser
+        .then((user) => {
             const { username, avatar } = user;
             setUserData({ username, avatar });
-        });
+        })
+        .catch(() => {});
     }
 
     // Calls the showUserInfoWhenReady function once when the page
