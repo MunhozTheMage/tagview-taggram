@@ -190,6 +190,21 @@
     padding: 0 13px;
 }
 
+.taggram-post .post-area .post-details .new-comment-area button.disabled,
+.taggram-post .post-area .post-details .new-comment-area button.disabled:hover {
+    /* FONT */
+    font-size: 16px;
+
+    /* COLORS */
+    color: rgb(145, 144, 144);
+
+    /* EFFECTS */
+    transition: all 0;
+
+    /* SPACES */
+    padding: 0 13px;
+}
+
 .taggram-post .post-area .post-details .new-comment-area textarea {
     /* SIZE */
     flex: auto;
@@ -220,7 +235,11 @@
 .taggram-post .post-area .post-details .new-comment-area textarea:focus,
 .taggram-post .post-area .post-details .new-comment-area textarea:hover {
     border-bottom: 2px solid #0095F6;
-    padding: 8px 15px;
+}
+
+.taggram-post .post-area .post-details .new-comment-area textarea.disabled:focus,
+.taggram-post .post-area .post-details .new-comment-area textarea.disabled:hover {
+    border-bottom: 2px solid rgb(145, 144, 144);
 }
 
 .taggram-post .post-area .post-details .comments-area {

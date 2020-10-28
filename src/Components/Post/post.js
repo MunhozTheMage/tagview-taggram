@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 import './post.css';
 
@@ -18,6 +18,9 @@ export default function Post() {
         status: false,
         critical: false,
     });
+    const [ interactivity, setInteractivity ] = useState(false);
+
+    const commentsBottom = useRef(null);
 
     // When the promisse is fulfilled, update the state with the
     // acquired info.
@@ -26,6 +29,7 @@ export default function Post() {
         .then((post) => {
             const { photo, user, location, comments, created_at } = post;
             setPostData({ photo, user, location, comments, created_at });
+            setInteractivity(true);
         })
         .catch((err) => {
             setHasError({ status: true, critical: true });
@@ -67,16 +71,22 @@ export default function Post() {
 
     // Triggered on "Enviar" button click.
     function handleSendComment() {
+        setInteractivity(false);
         postComment(commentMessage, false)
         .then((res) => {
             if(!postData.created_at) return;
+
+            setInteractivity(true);
+            setCommentMessage("");
 
             let newPostData = { ...postData };
             newPostData.comments = res.body;
 
             setPostData(newPostData);
+            commentsBottom.current.scrollIntoView({ behavior: 'smooth' });
         })
         .catch((err) => {
+            setInteractivity(true);
             setHasError({ status: true, critical: false });
         });
     }
@@ -142,13 +152,15 @@ export default function Post() {
         <div className="new-comment-area">
             <textarea
                 value={commentMessage}
-                onChange={(e) => { setCommentMessage(e.target.value) }}
+                className={interactivity ? "" : "disabled"}
+                onChange={ interactivity ? (e) => { setCommentMessage(e.target.value) } : () => {} }
                 placeholder="Comente sobre essa postagem..."
             ></textarea>
 
             <button
-                onClick={handleSendComment}
-            >Enviar</button>
+                className={interactivity ? "" : "disabled"}
+                onClick={ interactivity ? handleSendComment : () => {} }
+            >{ interactivity ? "Enviar" : "Aguarde" }</button>
         </div>
     );
 
@@ -171,6 +183,7 @@ export default function Post() {
                     { postOwner }
                     <div className="comments-area">
                         { renderComments() }
+                        <div ref={commentsBottom}></div>
                     </div>
                     <div className="above-comments">
                         { postInfo }

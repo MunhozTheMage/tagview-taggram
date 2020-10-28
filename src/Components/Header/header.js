@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react';
 import "./header.css";
 
 // JS Files
+import pathAdapter from "../../pathMode.js";
 import { loggedUser } from '../../API/taggram.js';
 
 export default function Header() {
@@ -31,7 +32,7 @@ export default function Header() {
     return (
         <header className="taggram-header">
             <div className="content-container">
-                <img className="logo" alt="logo" src="/images/logo.svg"></img>
+                <img className="logo" alt="logo" src={pathAdapter("images/logo.svg")}></img>
                 <div className="logged-user">
                     <p>{userData.username}</p>
                     { userData.avatar ?
